@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ColorSnapper</title>
+
+		<link rel="icon" type="image/x-icon" href="./images/fav.png" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="./src/styles.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="upload-box">
+				<img src="./images/fav.png" alt="Logo" width="65px" />
+				<h1 data-lang="en">Image Upload</h1>
+				<p data-lang="en">Upload an image to extract the visible color codes (5 colors).</p>
+				<input type="file" id="file-input" accept="image/*" hidden />
+				<label for="file-input" class="file-label">
+					<span id="file-name" data-lang="en">No file selected</span>
+					<img src="./images/folder.svg" alt="Folder icon" class="folder-icon" />
+				</label>
+				<button id="analyze-button" disabled>
+					<span data-lang="en">Extract Colors</span>
+					<span class="loading-spinner"></span>
+				</button>
+				<div id="color-codes"></div>
+				<p class="credit" data-lang="en">
+					made by <a href="https://github.com/DanCodernaut" target="_blank">DanCodernaut 🪄</a>
+				</p>
+				<div class="options">
+					<select id="language-select">
+						<option value="en" data-lang="en" data-flag="english.png">English</option>
+						<option value="hu" data-lang="hu" data-flag="hungarian.png">Magyar</option>
+						<option value="de" data-lang="de" data-flag="german.png">Deutsch</option>
+						<option value="fr" data-lang="fr" data-flag="france.png">Français</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<script src="./src/script.js"></script>
+	</body>
+</html>
